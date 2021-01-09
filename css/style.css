@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+h1,h2,h3{
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    word-spacing: 0.2em;
+}
+a,li,p{
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    word-spacing: 0.2em;
+}
+.hemburger{
+    display: none;
+}
+/* ------#############---utility-classess--######-------- */
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    color: #aaa;
+
+}
+.btn{
+    display: inline-block;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.btn-primary{
+    color: #fff;
+    background-color: #16a082a6;
+}
+.btn:hover{
+    background-color: #0fa887;
+}
+
+
+
+
+
+
+/* ------#############---navbar-sytling---######-------- */
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index:999;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
+.menu-items{
+    order: 2;
+    display: flex;
+}
+.menu-items li{
+    list-style: none;
+    font-size: 1.8rem;
+    margin-left: 1.8rem;
+}
+.navbar a{
+    color: #444;
+    text-decoration:none;
+    transition: 0.3s ease-in-out;
+}
+.navbar li a:hover{
+    color: #117964;
+    transition: 0.3s ease;
+}
+.logo{
+    order: 1;
+}
+.fruit,.vegetable,.grain{
+    margin: 0 10px;
+    box-shadow: 10px 20px 11px #aaa ;
+}
+/* ------#############---showcase-sytling---######-------- */
+.showcase-area{
+    position: relative;
+    background-image: url("/images/header-image2.jpg");
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.6rem;
+}
+/* ------#############---About-us-sytling---######-------- */
+#about{
+    padding: 20px 0px;
+
+
+}
+#about h2{
+    font-size: 3.2rem;
+}
+#about p{
+    font-size: 1.6rem;
+    color: #555;
+}
+.about-wrapper{
+box-shadow: 11px 24px 46px -25px rgb(235, 230, 230);
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#about .small{
+    font-size: 2.2rem;
+    font-weight: 600;
+    border-bottom: 2px solid black;
+    width: 170px;
+}
+
+.about-text{
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    animation: about-text-animation 3s ease-in-out forwards;
+    transform: translate(-150%);
+}
+
+.about-img img{
+    display: block;
+    height: 300px;
+    max-width:100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: right;
+    transform: translatex(150%);
+    animation: about-img-animation 3s ease-in-out forwards;
+}
+@keyframes about-img-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+@keyframes about-text-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+/* ------#############---Food-sytling---######-------- */
+
+#food{
+    margin-top: 3rem;
+    padding: 5rem 0 10rem;
+}
+
+#food h2{
+    text-align: center;
+    font-size: flex;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #555;
+}
+
+.food-container{
+    display: flex;
+    justify-content: space-between;
+}
+.food-container img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+.img-container{
+    position:relative;
+}
+
+.img-content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+}
+.img-content h3{
+    color: #fff;
+    font-size: 3rem;
+
+}
+.img-content a{
+    font-size: 1.2rem;
+}
+
+.img-container::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(14, 13, 13, 0.637);
+    /* opacity: 0; */
+    z-index: 1;
+    transform: scaley(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-container:hover::after{
+    opacity: 1;
+    transform: scalex(1)
+}
+.img-container:hover .img-content{
+    opacity: 7;
+    top: 60%;
+}
+
+
+/* ------#############---Food-menu-sytling---######-------- */
+
+
+.food-menu-heading{
+    margin-top: 4rem;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 700;
+    color: #666;
+}
+
+
+
+.food-menu-container{
+box-shadow: 11px 24px 46px -25px rgb(235, 230, 230);
+    display: flex;
+    background: #f5f5f7;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 30px 0px;
+}
+.food-menu-container img{
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.food-menu-item{
+    display: flex;
+    flex: 1 1 440px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-bottom: 3rem;
+}
+
+.food-title{
+    font-size:2.2rem;
+    font-weight:400;
+    color:#444;
+
+
+}
+.food-description p{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #555
+    
+}
+.food-description .food-price{
+    color: #117964;
+    font-weight: 700;
+}
+/* ------#############---testmonial-styling-menu-sytling---######-------- */
+
+#testimonial{
+    margin: 60px 0px;
+    text-align: center;
+}
+.testimonial-container{
+box-shadow: 11px 24px 46px -25px rgb(235, 230, 230);
+    background: #f5f5f7;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonial-container img{
+    display: block;
+    width: 250px;
+    height:300px;
+    object-fit: cover;
+    object-position: center;
+    
+}
+.testimonial-box{
+    margin: 4px;
+    font-size: 1.4rem;
+    text-align: center;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+.footer{
+    margin:10px auto 0 auto;
+    background-color: #f5f5f7;
+    text-align: center;
+}
+
+.star-rating{
+    order: 3;
+}
+.testimonial-text{
+    order: 2;
+}
+.customer-details{
+    order: 4;
+}
+/* ------#############---contact-sytling---######-------- */
+
+#contact-us{
+box-shadow: 11px 24px 46px -25px rgb(235, 230, 230);
+    margin: 40px auto;
+    background: rgb(226,226,226);
+    display: flex;
+
+}
+.contact-image>img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+.contact-form{
+    margin: 1rem;
+    outline: none;
+    outline-style: none;
+    width: 100%;
+ 
+}
+.contact-form>input{
+    border: none;
+    border-bottom: 2px solid #ddd;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    color: #444;
+    font-weight: 500;
+
+}
+.new-btn,.contact-form>textarea{
+    margin: 4px auto;
+
+
+    border: none;
+    display:block;
+}
+.contact-form>textarea{
+    width: 100%;
+    padding: 1rem 0;
+}
+
+
+
+
+
+
+
