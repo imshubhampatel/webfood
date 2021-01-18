@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/X-icon" href="./images/j.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
@@ -12,16 +13,17 @@
 </head>
 
 <body>
-    <nav class="navbar" >
-        <div class="navbar-container container">
+    <nav class="navbar">
+        <div class="navbar-container" id="nav-container">
             <!-- container-part-1st -->
-            <div class="hemburger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="hemburger" id="hemburger" onclick="onMyClick()">
+                <div class="line line1" id="line1"></div>
+                <div class="line line2 " id="line2"></div>
+                <div class="line line3" id="line3"></div>
             </div>
+            <div id="menu-bg"></div>
             <!-- container-part-2nd -->
-            <ul class="menu-items">
+            <ul class="menu-items" id="menu-item">
                 <li class="items"><a href="#showcase">Home</a></li>
                 <li class="items"><a href="#about">About</a></li>
                 <li class="items"><a href="#food">category</a></li>
@@ -30,7 +32,7 @@
                 <li class="items"><a href="#contact-us">contact</a></li>
             </ul>
             <div class="logo">
-                <h1>FW</h1>
+                <h1 id="logo">FW</h1>
             </div>
         </div>
     </nav>
@@ -38,7 +40,7 @@
         <div class="showcase-container">
             <h1 class="main-content">Eat Right Food</h1>
             <p>Eat Healthy Food, it is good for your health.</p>
-            <a href="#food-menu" class="btn btn-primary">Menu</a>
+            <a href="#food-menu" class="btn-grad">Menu</a>
         </div>
 
 
@@ -96,70 +98,169 @@
     </section>
 
     <section id="food-menu">
-        <h2 class="food-menu-heading">
-            Food Menu
-        </h2>
-        <div class="food-menu-container container bg">
-            <div class="food-menu-item">
-                <div class="food-image">
-                    <img src="./images/food-menu1.jpg" alt="">
-                </div>
-                <div class="food-description">
-                    <h2 class="food-title">food-menu Item 1</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, qui.</p>
-                    <p class="food-price">Price: &#8377 250.</p>
+        <div class="myCards" id="myCards">
+
+            <div class="card card-22">
+                <div class="circle"></div>
+                <h1>Dubri</h1>
+                <div class="img"><img src="./images/food-menu6.jpg" alt=""></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore More</a>
+                <!-- <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
+                </div> -->
+            </div>
+            <div class="card card-11">
+                <div class="circle"></div>
+                <h1>Dubri</h1>
+                <div class="img"><img src="./images/food-menu5.jpg" alt=""></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore More</a>
+                <!-- <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
+                </div> -->
+            </div>
+            <div class="card card-0">
+                <div class="circle"></div>
+                <h1>Bondzna</h1>
+                <div class="img"><img src="./images/food-menu3.jpg" alt=""></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore More</a>
+                <!-- <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
+                </div> -->
+            </div>
+            <div class="card card-1">
+                <div class="circle"></div>
+                <h1>Sahibug</h1>
+                <div class="img"><img src="./images/food-menu1.jpg" alt=" Deep"></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore more</a>
+                <!-- <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
+                </div> -->
+            </div>
+            <div class="card card-2">
+                <div class="circle"></div>
+                <h1>Rasilla</h1>
+                <div class="img"><img src="./images/food-menu2.jpg" alt=""></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore more</a>
+                <!-- <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
+                </div> -->
+            </div>
+            <div class="card card-3">
+                <div class="circle"></div>
+                <h1>oddsian</h1>
+                <div class="img"><img src="./images/food-menu4.jpg" alt=""></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore more</a>
+                <!-- <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
+                </div> -->
+            </div>
+            <div class="card card-4">
+                <div class="circle"></div>
+                <h1>Gomuchha</h1>
+                <div class="img"><img src="./images/food-menu3.jpg" alt=""></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore more</a>
+                <!-- <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
+                </div> -->
+            </div>
+
+        </div>
+    </section>
+    <section id="food-menu-second">
+        <div class="myCards" id="myCards">
+
+            <div class="card card-22">
+                <div class="circle"></div>
+                <h1>Dubri</h1>
+                <div class="img"><img src="./images/food-menu6.jpg" alt=""></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore More</a>
+                <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
                 </div>
             </div>
-            <div class="food-menu-item">
-                <div class="food-image">
-                    <img src="./images/food-menu2.jpg" alt="">
-                </div>
-                <div class="food-description">
-                    <h2 class="food-title">food-menu Item 1</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, qui.</p>
-                    <p class="food-price">Price: &#8377 250.</p>
-                </div>
-            </div>
-            <div class="food-menu-item">
-                <div class="food-image">
-                    <img src="./images/food-menu3.jpg" alt="">
-                </div>
-                <div class="food-description">
-                    <h2 class="food-title">food-menu Item 1</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, qui.</p>
-                    <p class="food-price">Price: &#8377 250.</p>
+            <div class="card card-11">
+                <div class="circle"></div>
+                <h1>Dubri</h1>
+                <div class="img"><img src="./images/food-menu5.jpg" alt=""></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore More</a>
+                <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
                 </div>
             </div>
-            <div class="food-menu-item">
-                <div class="food-image">
-                    <img src="./images/food-menu4.jpg" alt="">
-                </div>
-                <div class="food-description">
-                    <h2 class="food-title">food-menu Item 1</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, qui.</p>
-                    <p class="food-price">Price: &#8377 250.</p>
-                </div>
-            </div>
-            <div class="food-menu-item">
-                <div class="food-image">
-                    <img src="./images/food-menu5.jpg" alt="">
-                </div>
-                <div class="food-description">
-                    <h2 class="food-title">food-menu Item 1</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, qui.</p>
-                    <p class="food-price">Price: &#8377 250.</p>
+            <div class="card card-0">
+                <div class="circle"></div>
+                <h1>Bondzna</h1>
+                <div class="img"><img src="./images/food-menu3.jpg" alt=""></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore More</a>
+                <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
                 </div>
             </div>
-            <div class="food-menu-item">
-                <div class="food-image">
-                    <img src="./images/food-menu6.jpg" alt="">
-                </div>
-                <div class="food-description">
-                    <h2 class="food-title">food-menu Item 1</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, qui.</p>
-                    <p class="food-price">Price: &#8377 250.</p>
+            <div class="card card-1">
+                <div class="circle"></div>
+                <h1>Sahibug</h1>
+                <div class="img"><img src="./images/food-menu1.jpg" alt=" Deep"></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore more</a>
+                <!-- <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
+                </div> -->
+            </div>
+            <div class="card card-2">
+                <div class="circle"></div>
+                <h1>Rasilla</h1>
+                <div class="img"><img src="./images/food-menu2.jpg" alt=""></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore more</a>
+                <!-- <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
+                </div> -->
+            </div>
+            <div class="card card-3">
+                <div class="circle"></div>
+                <h1>oddsian</h1>
+                <div class="img"><img src="./images/food-menu4.jpg" alt=""></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore more</a>
+                <!-- <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
+                </div> -->
+            </div>
+            <div class="card card-4">
+                <div class="circle"></div>
+                <h1>Gomuchha</h1>
+                <div class="img"><img src="./images/food-menu3.jpg" alt=""></div><p>Italian cuisines is one of the most popular cuisines the world. Moreover, it is widely available in our India too</p>
+                <a href="">Explore more</a>
+                <div class="hero">
+                    <div class="round round-1"></div>
+                    <div class="round round-2"></div>
+                    <div class="round round-3"></div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -235,45 +336,76 @@
             <input type="email" name="" placeholder="Email">
             <input type="text" name="" placeholder="Phone">
             <textarea name="" id="" cols="30" rows="10" placeholder="Give your feedback"></textarea>
-            <button class="btn new-btn btn-primary">Submit</button>
+            <button class=" btn-grad">Submit</button>
 
         </div>
 
     </section>
 
-
-    
-    <section class="footer container" id="footer">
+    <section class="footer" id="footer">
         <h3 class="footer-content">copyright &#169 2020</h3>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+
+
     </section>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script> -->
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
 
-      // Store hash
-      var hash = this.hash;
+                    // Store hash
+                    var hash = this.hash;
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
 
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+
+        console.log("hellow owrld");
+
+        // const hemburger = document.getElementById('hemburger');
+        // hemburger.addEventListener("click", () => {
+        //     hemburger.classList.toggle("change");
+        //     var items = document.getElementById('menu-item');
+        //     items.classList.toggle("changed").style.display = "none";
+        // })
+
+        function onMyClick(){
+            const hemburger = document.getElementById('hemburger');
+            const items = document.getElementById('menu-item');
+            const menuColor = document.getElementById('nav-container');
+            hemburger.classList.toggle('change');
+            menuColor.classList.toggle('change-bg');
+            items.classList.toggle('remove');
+
+        }
+
+        let body = document.body
+        body.addEventListener("click",()=>{
+            console.log('recooment desktop site');
+        })
+
+
+
+
+
+
+
+    </script>
 
 </body>
 
