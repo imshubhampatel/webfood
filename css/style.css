@@ -5,24 +5,42 @@
     box-sizing: border-box;
 }
 
+html,body{
+    width: 100%;
+    overflow-x: hidden;
+}
 html {
     font-size: 62.5%;
 }
+img{
+    color: #fbfbfb;
+    color: #cdaccb;
+    color: #a244d0;
+    color: #6d3485;
+    color: #fdda02;
+}
+:root{
+    --testimonial:#a244d0;
+    --bgcolor: #fbfbfb;
+
+}
 
 body {
+    background:  var(--bgcolor);
     font-family: 'Poppins', sans-serif;
 }
 
 h1, h2, h3 {
+    align-items: center;
     font-size: 3rem;
-    letter-spacing: 0.1em;
-    word-spacing: 0.2em;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.2rem;
 }
 
 a, li, p {
     font-size: 1.6rem;
-    letter-spacing: 0.1em;
-    word-spacing: 0.2em;
+    letter-spacing: 0.15rem;
+    word-spacing: 0.5rem;
 }
 
 /* ------#############---utility-classess--######-------- */
@@ -40,7 +58,7 @@ a, li, p {
 }
 
 .btn-grad {
-    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%)
+    background-image: linear-gradient(to right, #314755 10%, #26a0da 51%, #020507 100%)
 }
 
 .btn-grad {
@@ -78,10 +96,6 @@ a, li, p {
 
 .btn-primary {
     color: #fff;
-}
-
-.btn:hover {
-    background-color: #0fa887;
 }
 
 /* ------#############---hemburger-sytling---######-------- */
@@ -141,10 +155,9 @@ a, li, p {
     height: 700px;
     position: absolute;
     top: -200px;
-    right: -450px;
+    left: 500px;
     opacity: 333;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    display: none;
     border-radius: 50%;
     transition:0.4s ease-in;
 
@@ -152,7 +165,7 @@ a, li, p {
 
 
 .change-bg #menu-bg {
-    display: block;
+    display: inline-block;
     transition: 0.5s ease-in-out;
 }
 
@@ -161,7 +174,7 @@ a, li, p {
 .navbar {
     box-shadow: 0px 5px 10px 0px #aaaa;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     background: #fff;
     color: #000;
     opacity: 0.85;
@@ -210,12 +223,32 @@ a, li, p {
 
 .showcase-area {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.333), rgba(0, 0, 0, 0.689)), url("../images/header-image2.jpg");
-    height: 60vh;
+    height: 90vh;
     width: 100vw;
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
+    animation: slider 10s infinite ease-in-out;
+}
+@keyframes slider{
+    75%{
+        background: url(../images/building-image.jpg);
+    }
+    100%{
+        background: url(../images/header-image2.jpg);
+    }
+    75%{
+        background: url(../images/building-image.jpg);
+    }
+    50%{
+        background: url(../images/restraunt-image.jpg);
+    }
+    25%{
+        background: url(../images/building-image.jpg);
+    }
+    0%{
+        background: url(../images/restraunt-image.jpg);
+    }
 }
 
 .showcase-container {
@@ -305,10 +338,12 @@ a, li, p {
 
 .food-container {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
+
 
 }
 
+/* ############### FOOD IMAGE SYLIGN  ---############# */
 .food-container img {
     display: block;
     width: 100%;
@@ -318,17 +353,16 @@ a, li, p {
     object-position: center;
 }
 .img-container{
-    box-shadow: 0 2px 6px 3px rgba(0,0,0,.16), 0 2px 12px 3px rgba(0,0,0,.12);
+    box-shadow: 0 2px 12px 3px rgba(0,0,0,.16), 0 2px 7px 4px rgba(0,0,0,.12);
+}
+.fruit, .vegetable, .grain {
+    box-shadow: 0 2px 12px 3px rgba(0,0,0,.16), 0 2px 7px 4px rgba(0,0,0,.12);
 }
 
-.fruit, .vegetable, .grain {
-    box-shadow: 0 2px 5px 0px rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-    
-}
-l
 .vegetable {
     margin: 0 20px;
 }
+
 
 .img-container {
     position: relative;
@@ -336,7 +370,7 @@ l
 
 .img-content {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -350,7 +384,8 @@ l
 }
 
 .img-content a {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    background: teal;
 }
 
 .img-container::after {
@@ -365,7 +400,7 @@ l
     /* opacity: 0; */
     z-index: 1;
     transform: scaley(0);
-    transform-origin: 100% 100%;
+    transform-origin: bottom;
     transition: all 0.3s ease-in-out;
 }
 
@@ -376,7 +411,7 @@ l
 
 .img-container:hover .img-content {
     opacity: 7;
-    top: 60%;
+    top: 50%;
 }
 
 /* ------#############---Food-menu-sytling---######-------- */
@@ -385,15 +420,15 @@ l
     overflow: hidden;
     
 }
-
-#food-menu-second {
-
-    display: none;
+div.card a{
+    margin: 0 auto;
+    text-decoration: none;
+    text-align: center;
 }
+
 
 #myCards {
     box-shadow: 0 2px 5px 0px rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);    
-
     box-shadow: 5px 6px 20px 0px #000;
     height: 500px;
     max-width: 1200px;
@@ -404,7 +439,7 @@ l
     border-color: red transparent transparent transparent;
 }
 
-.myCards:after {
+.myCards::after {
     content: "";
     top: 0;
     right: 0;
@@ -535,70 +570,8 @@ l
     border-radius: 30px;
 }
 
-.round-1 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    border-radius: 40%;
-    top: 70%;
-    animation-name: rotation;
-    background: rgba(27, 131, 206, 0.342);
-    transition: 0.4s ease-in-out;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
-    z-index: 2;
-}
 
-.round-2 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    border-radius: 48%;
-    top: 70%;
-    left: 70px;
-    animation-name: rotation;
-    background: rgba(31, 142, 216, 0.274);
-    transition: 0.4s ease-in-out;
-    animation-duration: 3s;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
-    z-index: 2;
-}
 
-.round-3 {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    border-radius: 45%;
-    top: 70%;
-    right: 0px;
-    animation-name: water-rotate;
-    background: rgba(42, 163, 250, 0.294);
-    animation-duration: 0.5s;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
-    transition: 0.4s ease-in-out;
-    z-index: 2;
-}
-
-@keyframes water-rotate {
-    0% {
-        transform: translate(-15px, 10px) rotate(-45deg);
-        transition: 0.4s ease-in-out;
-    }
-    25% {
-        transform: translate(-20px, 10px) rotate(-90deg);
-        transition: 0.4s ease-in-out;
-    }
-    75% {
-        transform: translate(-25px, 10px) rotate(-130deg);
-        transition: 0.4s ease-in-out;
-    }
-    100% {
-        transform: translate(-30px, 10px) rotate(-180deg);
-        transition: 0.8s ease-in-out;
-    }
-}
 
 .card>a {
     position: absolute;
@@ -619,25 +592,32 @@ l
 
 #testimonial {
     margin: 60px 0px;
-    text-align: center;
 }
 
 .testimonial-container {
     box-shadow: 0 2px 5px 0px rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-
     /* background-image: linear-gradient( 143.3deg,  rgba(216,27,96,0.980) 33.1%, rgba(237,107,154,0.781) 74.9% ); */
-    background-image: linear-gradient( 112.4deg, rgba(169, 28, 115, 1) 21.6%, rgba(219, 112, 54, 1) 92.2%);
-    text-align: center;
-    color: white;
+    color: rgb(29, 3, 3);
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#testimonial span:nth-last-child(2n){
+    color: yellow;
+}
+#testimonial span:nth-last-child(2n+1){
+    color: orange;
+}
+.testimonial-container{
+    background-image: linear-gradient(112deg,rgb(248, 103, 163) 10%,rgb(29, 162, 196) 50%,rgb(207, 45, 186)100%);
 }
 
 .testimonial-container img {
     display: block;
     width: 250px;
     height: 300px;
+    padding-top: 10px;
     object-fit: cover;
     object-position: center;
 }
@@ -645,7 +625,7 @@ l
 .testimonial-box {
     margin: 4px;
     font-size: 1.4rem;
-    text-align: center;
+    text-align: center   ;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -666,17 +646,22 @@ l
 
 /* ------#############---contact-sytling---######-------- */
 
-#contact-us {
+.box-shadow{
+    display: flex;
+    flex-wrap: wrap;
     box-shadow: 0 2px 5px 0px rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 
+}
+#contact-us {
+    overflow-x:hidden;
+    box-shadow: 0 2px 5px 0px rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
     margin: 40px auto;
     background-color: #E5E7EB;
     display: flex;
 }
 
+
 .contact-image>img {
-    animation: about-text-animation 3s ease-in-out forwards;
-    transform: translatex(-150%);
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -685,8 +670,6 @@ l
 }
 
 .contact-form {
-    transform: translatex(150%);
-    animation: about-img-animation 3s ease-in-out forwards;
     margin: 1rem;
     outline: none;
     outline-style: none;
@@ -773,9 +756,9 @@ l
 
     /* id food desigining  */
     .food-container {
+        display: flex;
         flex-direction: column;
         align-items: stretch;
-        box-shadow: 0 2px 5px 0px rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
         margin: 0 auto;
     }
    
@@ -835,13 +818,26 @@ l
         width: 100%;
     }
 }
-@media (max-width:361px){
+@media (max-width:381px){
+
+    body{
+        background-color: #ddd;
+    }
+    .showcase-area{
+        width: 100vw;
+        height: 95vh;
+    }
+    html,body{
+        width: 100%;
+        overflow-x: hidden;
+    }
     .food-container{
         width: 360px;
         margin: 2rem auto;
     }
     #menu-bg{
-        transform: translatex(-111%);
+        top: -250px;
+        left: 150px;
     }
     .container{
      max-width: 360px;
@@ -857,5 +853,25 @@ l
     .food-type{
         width: 300px;
     }
-    
+    .about-text,.about-img{
+        animation: none;
+        transform: none;
+        
+    } 
+    .myCards{
+        display: none;
+    }
 }
+ 
+
+
+/* img{
+    color: rgb(251, 251, 251);
+    color: #fbfbfb;
+    color: rgb(37, 150, 190);
+    color: #57d6e7;
+    color: rgb(255, 103, 164);
+    color: #ff67a4;
+    color: rgb(43, 41, 42) ;
+    color: #2b292a;
+} */
