@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,24 +11,24 @@ html,body{
     width: 100%;
     overflow-x: hidden;
 }
+
 html {
     font-size: 62.5%;
 }
-img{
-    color: #fbfbfb;
+
+/* color: #fbfbfb;
     color: #cdaccb;
     color: #a244d0;
     color: #6d3485;
-    color: #fdda02;
-}
-:root{
-    --testimonial:#a244d0;
-    --bgcolor: #fbfbfb;
+    color: #fdda02; */
 
+:root {
+    --testimonial: #a244d0;
+    --bgcolor: #fbfbfb;
 }
 
 body {
-    background:  var(--bgcolor);
+    background: var(--bgcolor);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -159,10 +161,8 @@ a, li, p {
     opacity: 333;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     border-radius: 50%;
-    transition:0.4s ease-in;
-
+    transition: 0.4s ease-in;
 }
-
 
 .change-bg #menu-bg {
     display: inline-block;
@@ -225,31 +225,13 @@ a, li, p {
     position: relative;
     height: 90vh;
     width: 100vw;
-    background-size: 100% 100%;
+    background: url("../images/header-image2.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    animation: slider 10s infinite ease-in-out;
+
 }
-@keyframes slider{
-    75%{
-        background: url(../images/building-image.jpg);
-    }
-    100%{
-        background: url(../images/header-image2.jpg);
-    }
-    75%{
-        background: url(../images/building-image.jpg);
-    }
-    50%{
-        background: url(../images/restraunt-image.jpg);
-    }
-    25%{
-        background: url(../images/building-image.jpg);
-    }
-    0%{
-        background: url(../images/restraunt-image.jpg);
-    }
-}
+
 
 .showcase-container {
     display: flex;
@@ -276,10 +258,11 @@ a, li, p {
 }
 
 .about-wrapper {
-    
-    box-shadow: 0 2px 5px 0px rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #about .small {
@@ -293,8 +276,6 @@ a, li, p {
     flex: 1 1 400px;
     padding: 30px;
     margin: auto;
-    animation: about-text-animation 3s ease-in-out forwards;
-    transform: translate(-150%);
 }
 
 .about-img>img {
@@ -304,21 +285,8 @@ a, li, p {
     margin: auto;
     object-fit: cover;
     object-position: right;
-    transform: translatex(150%);
-    animation: about-img-animation 3s ease-in-out forwards;
 }
 
-@keyframes about-img-animation {
-    100% {
-        transform: translate(0);
-    }
-}
-
-@keyframes about-text-animation {
-    100% {
-        transform: translate(0);
-    }
-}
 
 /* ------#############---Food-sytling---######-------- */
 
@@ -339,11 +307,10 @@ a, li, p {
 .food-container {
     display: flex;
     justify-content: space-between;
-
-
 }
 
 /* ############### FOOD IMAGE SYLIGN  ---############# */
+
 .food-container img {
     display: block;
     width: 100%;
@@ -352,17 +319,18 @@ a, li, p {
     object-fit: cover;
     object-position: center;
 }
-.img-container{
-    box-shadow: 0 2px 12px 3px rgba(0,0,0,.16), 0 2px 7px 4px rgba(0,0,0,.12);
+
+.img-container {
+    box-shadow: 0 2px 12px 3px rgba(0, 0, 0, .16), 0 2px 7px 4px rgba(0, 0, 0, .12);
 }
+
 .fruit, .vegetable, .grain {
-    box-shadow: 0 2px 12px 3px rgba(0,0,0,.16), 0 2px 7px 4px rgba(0,0,0,.12);
+    box-shadow: 0 2px 12px 3px rgba(0, 0, 0, .16), 0 2px 7px 4px rgba(0, 0, 0, .12);
 }
 
 .vegetable {
     margin: 0 20px;
 }
-
 
 .img-container {
     position: relative;
@@ -418,17 +386,16 @@ a, li, p {
 
 .myCards {
     overflow: hidden;
-    
 }
-div.card a{
+
+div.card a {
     margin: 0 auto;
     text-decoration: none;
     text-align: center;
 }
 
-
 #myCards {
-    box-shadow: 0 2px 5px 0px rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);    
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
     box-shadow: 5px 6px 20px 0px #000;
     height: 500px;
     max-width: 1200px;
@@ -570,9 +537,6 @@ div.card a{
     border-radius: 30px;
 }
 
-
-
-
 .card>a {
     position: absolute;
     color: white;
@@ -595,7 +559,7 @@ div.card a{
 }
 
 .testimonial-container {
-    box-shadow: 0 2px 5px 0px rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
     /* background-image: linear-gradient( 143.3deg,  rgba(216,27,96,0.980) 33.1%, rgba(237,107,154,0.781) 74.9% ); */
     color: rgb(29, 3, 3);
     display: flex;
@@ -603,14 +567,16 @@ div.card a{
     align-items: center;
 }
 
-#testimonial span:nth-last-child(2n){
+#testimonial span:nth-last-child(2n) {
     color: yellow;
 }
-#testimonial span:nth-last-child(2n+1){
+
+#testimonial span:nth-last-child(2n+1) {
     color: orange;
 }
-.testimonial-container{
-    background-image: linear-gradient(112deg,rgb(248, 103, 163) 10%,rgb(29, 162, 196) 50%,rgb(207, 45, 186)100%);
+
+.testimonial-container {
+    background-image: linear-gradient(112deg, rgb(248, 103, 163) 10%, rgb(29, 162, 196) 50%, rgb(207, 45, 186)100%);
 }
 
 .testimonial-container img {
@@ -625,7 +591,7 @@ div.card a{
 .testimonial-box {
     margin: 4px;
     font-size: 1.4rem;
-    text-align: center   ;
+    text-align: center;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -646,20 +612,19 @@ div.card a{
 
 /* ------#############---contact-sytling---######-------- */
 
-.box-shadow{
+.box-shadow {
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 0 2px 5px 0px rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
 }
+
 #contact-us {
-    overflow-x:hidden;
-    box-shadow: 0 2px 5px 0px rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    overflow-x: hidden;
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
     margin: 40px auto;
     background-color: #E5E7EB;
     display: flex;
 }
-
 
 .contact-image>img {
     display: inline-block;
@@ -717,13 +682,23 @@ div.card a{
     font-size: 2rem;
 }
 
+
+@media (max-width:950px){
+    .about-wrapper .about-text p{
+        display: none;
+    }
+    .about-wrapper .about-text h1{
+        font-size: 2rem;
+    }
+}
+
 @media (max-width:769px) {
-    .navbar-container{
+    .navbar-container {
         opacity: 0.95;
         overflow: hidden;
         margin-right: 70px;
     }
-    #menu-item{
+    #menu-item {
         display: block;
         width: 30vh;
         height: 59vh;
@@ -733,8 +708,8 @@ div.card a{
         right: 1px;
         text-align: center;
     }
-    #menu-item>li{
-        padding:10px;
+    #menu-item>li {
+        padding: 10px;
     }
     .hemburger {
         display: block;
@@ -753,7 +728,6 @@ div.card a{
     .showcase-area {
         height: 74vh;
     }
-
     /* id food desigining  */
     .food-container {
         display: flex;
@@ -761,7 +735,6 @@ div.card a{
         align-items: stretch;
         margin: 0 auto;
     }
-   
     #food>h2 {
         color: rgb(109, 192, 212);
         margin: 3rem auto;
@@ -769,19 +742,18 @@ div.card a{
     .vegetable {
         margin: 0;
     }
-    #food{
+    #food {
         display: block;
         padding: 0;
     }
     .food-container {
         margin-bottom: 5rem;
     }
-    .food-type{
+    .food-type {
         width: 450px;
         margin: 0 auto;
         display: block;
     }
-    
     .food-type:not(:last-child) {
         margin-bottom: 3rem;
     }
@@ -789,7 +761,6 @@ div.card a{
         display: block;
         margin: 4rem 0;
     }
-
     /* testimonial desiging */
     .testimonial-container {
         flex-direction: column;
@@ -797,7 +768,6 @@ div.card a{
     .testimonial-box:not(:last-child) {
         margin-bottom: 3rem;
     }
-
     /* contact us styling designing */
     #contact-us {
         display: flex;
@@ -809,61 +779,61 @@ div.card a{
         padding: 5rem 4px;
     }
     /* about desiging */
-   
     #about {
         margin: 0 auto;
     }
-   
     .about-img>img {
         width: 100%;
     }
 }
-@media (max-width:381px){
 
-    body{
+@media (max-width:381px) {
+    body {
         background-color: #ddd;
     }
-    .showcase-area{
+    .showcase-area {
         width: 100vw;
         height: 95vh;
     }
-    html,body{
+    html, body {
         width: 100%;
         overflow-x: hidden;
     }
-    .food-container{
+    .food-container {
         width: 360px;
         margin: 2rem auto;
     }
-    #menu-bg{
+    #menu-bg {
         top: -250px;
         left: 150px;
     }
-    .container{
-     max-width: 360px;
+    .container {
+        max-width: 360px;
     }
-    .navbar-container{
+    .navbar-container {
         max-width: 364px;
     }
-    .img-container{
+    .img-container {
         margin-right: 0;
         width: 100%;
         height: 50%;
     }
-    .food-type{
+    .about-wrapper .about-text p{
+        display:block;
+    }
+    .food-type {
         width: 300px;
     }
-    .about-text,.about-img{
-        animation: none;
-        transform: none;
-        
-    } 
-    .myCards{
+    .about-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .myCards {
         display: none;
     }
 }
- 
-
 
 /* img{
     color: rgb(251, 251, 251);
